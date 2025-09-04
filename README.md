@@ -54,7 +54,7 @@ The Pywal color scheme is based on this Arch Linux themed image, which generates
 ![Neovim Color Example 2](assets/nvimcolors1.png)
 ![Neovim Color Example 3](assets/nvimcolors2.png)
 
-The Neovim configuration in `nvim/` features dynamic color theming that automatically adapts to the Pywal color scheme. This integration is powered by my [Hyprstyles](https://github.com/Kalytheos/Hyprstyles) project, which provides seamless color synchronization between Pywal and Neovim themes. The colors change dynamically based on your wallpaper selection, creating a cohesive visual experience across your entire desktop environment.
+The Neovim configuration in `nvim/` features dynamic color theming that automatically adapts to the Pywal color scheme. This configuration provides seamless color synchronization between Pywal and Neovim themes, creating a cohesive visual experience across your entire desktop environment. The theming system is inspired by the [Hyprstyles](https://github.com/Kalytheos/Hyprstyles) project.
 
 ### Application Launcher
 ![Wofi Launcher](assets/wofi.png)
@@ -75,13 +75,8 @@ sudo pacman -S hyprland waybar kitty wofi neofetch neovim starship
 
 1. **Clone the repository**
    ```bash
-   git clone --recursive https://github.com/Kalytheos/MyDots.git
+   git clone https://github.com/Kalytheos/MyDots.git
    cd MyDots
-   ```
-   
-   If you already cloned without `--recursive`, initialize the submodules:
-   ```bash
-   git submodule update --init --recursive
    ```
 
 2. **Backup your existing configurations** (if any)
