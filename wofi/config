@@ -1,0 +1,11 @@
+mode = drun
+allow_images = true
+image_size = 45
+width = 750
+filter_rate=100
+hide_scroll=true
+normal_window=false
+insensitive=false
+hide_search=false
+dynamic_lines=true
+single_click=true

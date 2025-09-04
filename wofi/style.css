@@ -1,0 +1,106 @@
+@define-color crust      #0C0C0C;    /* color1 → negro profundo */
+@define-color mantle     #161616;    /* color2 → negro oscuro */
+@define-color text       #c2c2c2;    /* color7 → texto gris claro */
+@define-color blue       #50A2CE;    /* color3 → azul claro vibrante */
+@define-color mauve      #9e71b1;    /* color4 → violeta suave */
+@define-color sapphire   #3492E1;    /* color5 → azul brillante */
+@define-color lavender   #2c54cc;    /* color6 → azul profundo */
+@define-color overlay2   #6a5757;    /* color8 → marrón-grisáceo oscuro */
+@define-color sky        #2F6FDB;    /* color9 → azul medio intenso */
+@define-color overlay1   #4E6BD1;    /* color10 → azul apagado */
+@define-color flamingo   #2B8BD6;    /* color11 → azul algo más saturado */
+@define-color base       #0c0c0c;
+* {
+  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-size: 18px;
+}
+
+/* Window */
+window {
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid @lavender;
+  border-radius: 20px;
+  background-color: @base;
+}
+
+/* Inner Box */
+#inner-box {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: @base;
+}
+
+/* Outer Box */
+#outer-box {
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @base;
+}
+
+/* Scroll */
+#scroll {
+  margin: 0px;
+  padding: 10px;
+  border: none;
+  background-color: @base;
+}
+
+/* Input */
+#input {
+  margin: 5px 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 0.1em;
+  color: @text;
+  background-color: @base;
+}
+
+#input image {
+    border: none;
+    color: @red;
+}
+
+#input * {
+  outline: 4px solid @red!important;
+}
+
+/* Text */
+#text {
+  margin: 5px;
+  border: none;
+  color: @text;
+}
+
+#entry {
+  background-color: @base;
+}
+
+#entry arrow {
+  border: none;
+  color: @lavender;
+}
+
+/* Selected Entry */
+#entry:selected {
+  border: 0.11em solid @lavender;
+  border-radius: 10px;
+
+}
+
+#entry:selected #text {
+  color: @mauve;
+}
+
+#entry:drop(active) {
+  background-color: @lavender!important;
+}
+image{
+  margin-left: .25em;
+  margin-right: .25em
+  
+}

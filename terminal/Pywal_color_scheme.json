@@ -1,0 +1,28 @@
+{
+    "checksum": "4eb5ad1e6f87ba29f71f753c22ee4377",
+    "wallpaper": "/home/kalytheos/Documents/Wallpapers/arch.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0C0C0C",
+        "foreground": "#c2c2c2",
+        "cursor": "#c2c2c2"
+    },
+    "colors": {
+        "color0": "#0C0C0C",
+        "color1": "#2F6FDB",
+        "color2": "#4E6BD1",
+        "color3": "#2B8BD6",
+        "color4": "#3492E1",
+        "color5": "#508DDA",
+        "color6": "#50A2CE",
+        "color7": "#c2c2c2",
+        "color8": "#6a5757",
+        "color9": "#2F6FDB",
+        "color10": "#4E6BD1",
+        "color11": "#2B8BD6",
+        "color12": "#3492E1",
+        "color13": "#508DDA",
+        "color14": "#50A2CE",
+        "color15": "#c2c2c2"
+    }
+}

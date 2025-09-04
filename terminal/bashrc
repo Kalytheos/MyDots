@@ -1,0 +1,51 @@
+#
+# ~/.bashrc
+#
+
+eval "$(starship init bash)"
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+
+
+# Created by `pipx` on 2025-04-28 13:40:13
+export PATH="$PATH:/home/kalytheos/.local/bin"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+
+#recargar pywal
+[ -f "${HOME}/.cache/wal/sequences" ] && cat "${HOME}/.cache/wal/sequences"
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+export LANG=en_US.UTF-8
+
+#~/scripts/kitty_random_bg.sh 
+~/scripts/console_banner.sh 
+#neofetch
+
+alias ls='lsd'
+alias vi='nvim'
+alias co='cp'
+alias v='nvim'
+alias neo='neofetch'
+alias image='kitty +kitten icat'
+alias cat='bat'
+alias e='exit'
+alias c='clear'
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
