@@ -8,19 +8,6 @@ A complete Hyprland desktop environment configuration with carefully crafted dot
 
 This is how my desktop looks by default. The wallpapers used in this setup can be found in my [Wallpin repository](https://github.com/Kalytheos/Wallpin). The status bar configuration is achieved using the files in the `waybar/` directory.
 
-## 📁 Repository Structure
-
-```
-MyDots/
-├── hyprland.conf          # Main Hyprland configuration
-├── assets/               # Screenshots and preview images
-├── neofetch/            # Neofetch configuration and themes
-├── nvim/                # Neovim configuration with dynamic Pywal theming
-├── terminal/            # Terminal configurations (Kitty, Bash, Starship)
-├── waybar/              # Waybar status bar configuration
-└── wofi/                # Wofi launcher configuration
-```
-
 ## 🎯 Features
 
 - **Hyprland**: Modern Wayland compositor with smooth animations
