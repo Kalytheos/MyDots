@@ -75,8 +75,13 @@ sudo pacman -S hyprland waybar kitty wofi neofetch neovim starship
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Kalytheos/MyDots.git
+   git clone --recursive https://github.com/Kalytheos/MyDots.git
    cd MyDots
+   ```
+   
+   If you already cloned without `--recursive`, initialize the submodules:
+   ```bash
+   git submodule update --init --recursive
    ```
 
 2. **Backup your existing configurations** (if any)
