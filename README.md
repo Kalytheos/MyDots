@@ -15,6 +15,7 @@ MyDots/
 ├── hyprland.conf          # Main Hyprland configuration
 ├── assets/               # Screenshots and preview images
 ├── neofetch/            # Neofetch configuration and themes
+├── nvim/                # Neovim configuration with dynamic Pywal theming
 ├── terminal/            # Terminal configurations (Kitty, Bash, Starship)
 ├── waybar/              # Waybar status bar configuration
 └── wofi/                # Wofi launcher configuration
@@ -27,6 +28,7 @@ MyDots/
 - **Kitty**: GPU-accelerated terminal emulator
 - **Wofi**: Application launcher with custom styling
 - **Neofetch**: System information tool with custom themes
+- **Neovim**: Advanced text editor with dynamic Pywal color theming
 - **Starship**: Cross-shell prompt with custom configuration
 - **Pywal**: Color scheme generator integration
 
@@ -37,15 +39,22 @@ MyDots/
 ![Neofetch Display](assets/neofetch.png)
 
 The terminal setup includes configurations for:
-- **Kitty terminal**: GPU-accelerated terminal with custom configuration found in `terminal/kitty.conf`. Includes background images located in `terminal/fkitty/` directory for a personalized terminal experience
-- **Bash**: Custom bashrc in `terminal/bashrc`
+- **Kitty terminal**: GPU-accelerated terminal with custom configuration found in `terminal/kitty.conf`. Includes 42 background images located in `terminal/fkitty/` directory for a personalized terminal experience. Random background selection is configured through the bash configuration
+- **Bash**: Custom bashrc in `terminal/bashrc` - includes Kitty random background image functionality
 - **Starship prompt**: Configuration in `terminal/starship.toml`
-- **Neofetch**: Custom themes and configurations in `neofetch/`
+- **Neofetch**: Custom themes and configurations in `neofetch/`. Multiple custom images are available in `neofetch/imagesneo/` directory with automatic random selection built into the configuration
 
 ### Color Scheme Reference
 <img src="assets/arch.png" alt="Pywal Color Reference" width="150">
 
 The Pywal color scheme is based on this Arch Linux themed image, which generates the dynamic color palette used throughout the configuration.
+
+### Neovim Dynamic Theming
+![Neovim Color Example 1](assets/nvimcolor.png)
+![Neovim Color Example 2](assets/nvimcolors1.png)
+![Neovim Color Example 3](assets/nvimcolors2.png)
+
+The Neovim configuration in `nvim/` features dynamic color theming that automatically adapts to the Pywal color scheme. This integration is powered by my [Hyprstyles](https://github.com/Kalytheos/Hyprstyles) project, which provides seamless color synchronization between Pywal and Neovim themes. The colors change dynamically based on your wallpaper selection, creating a cohesive visual experience across your entire desktop environment.
 
 ### Application Launcher
 ![Wofi Launcher](assets/wofi.png)
@@ -59,7 +68,7 @@ The Wofi launcher configuration is located in the `wofi/` directory. Icons used 
 Make sure you have the following packages installed on your Arch Linux system:
 
 ```bash
-sudo pacman -S hyprland waybar kitty wofi neofetch starship
+sudo pacman -S hyprland waybar kitty wofi neofetch neovim starship
 ```
 
 ### Step-by-Step Setup
@@ -77,6 +86,7 @@ sudo pacman -S hyprland waybar kitty wofi neofetch starship
    cp -r ~/.config/waybar ~/.config/backup/ 2>/dev/null || true
    cp -r ~/.config/kitty ~/.config/backup/ 2>/dev/null || true
    cp -r ~/.config/wofi ~/.config/backup/ 2>/dev/null || true
+   cp -r ~/.config/nvim ~/.config/backup/ 2>/dev/null || true
    cp ~/.config/neofetch ~/.config/backup/ 2>/dev/null || true
    ```
 
@@ -113,19 +123,25 @@ sudo pacman -S hyprland waybar kitty wofi neofetch starship
    cp -r neofetch/imagesneo ~/.config/neofetch/
    ```
 
-7. **Configure Wofi**
+7. **Configure Neovim with dynamic theming**
+   ```bash
+   mkdir -p ~/.config/nvim
+   cp -r nvim/* ~/.config/nvim/
+   ```
+
+8. **Configure Wofi**
    ```bash
    mkdir -p ~/.config/wofi
    cp wofi/* ~/.config/wofi/
    ```
 
-8. **Download wallpapers** (optional)
+9. **Download wallpapers** (optional)
    ```bash
    git clone https://github.com/Kalytheos/Wallpin.git ~/Pictures/Wallpapers
    ```
 
-9. **Download Wofi icons** (optional)
-   Download icons from [Gnome-Look](https://www.gnome-look.org/p/2128085) and place them in your preferred icons directory.
+10. **Download Wofi icons** (optional)
+    Download icons from [Gnome-Look](https://www.gnome-look.org/p/2128085) and place them in your preferred icons directory.
 
 ### Post-Installation
 
@@ -163,6 +179,7 @@ This configuration is provided as-is for educational and personal use.
 ## 🔗 Related Repositories
 
 - [Wallpin](https://github.com/Kalytheos/Wallpin) - Wallpaper collection
+- [Hyprstyles](https://github.com/Kalytheos/Hyprstyles) - Neovim dynamic theming with Pywal integration
 - [Wofi Icons](https://www.gnome-look.org/p/2128085) - Icon pack for Wofi launcher
 
 ---
